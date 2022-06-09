@@ -22,7 +22,7 @@ jobs:
         with:
           command: test
 
-  test_macost:
+  test_macos:
     name: Test on MacOS
     runs-on: macos-latest
     steps:
@@ -33,6 +33,20 @@ jobs:
           toolchain: stable
           overrideo: true
           target: x86_64-apple-darwin
+      - uses: actions-rs/cargo@v1
+        with:
+          command: test
+  
+  test_windows:
+    name: Test on Windows
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          overrideo: true
       - uses: actions-rs/cargo@v1
         with:
           command: test
