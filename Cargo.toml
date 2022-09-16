@@ -25,7 +25,7 @@ strip = true
 # macros
 async-trait = "0.1"
 anyhow = "1"
-ambassador = "0.2"
+ambassador = "0.3"
 thiserror = "1"
 derive_more = "0.99"
 derivative = "2"
